@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Edit Post</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="text">Text</label>
+            <textarea class="form-control" id="text" name="text" required>{{ post.text }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="hashtags">Hash Tags</label>
+            <input type="text" class="form-control" id="hashtags" name="hashtags" value="{{ post.hashtags }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Post</button>
+    </form>
+{% endblock %}
